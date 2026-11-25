@@ -45,10 +45,13 @@ const server = http.createServer((req, res) => {
     const bangkok = now.toLocaleString("en-GB", { timeZone: "Asia/Bangkok" });
     res.writeHead(200, { "Content-Type": "application/json" });
     res.end(JSON.stringify({ timeZone: "Asia/Bangkok", time: bangkok, iso: now.toISOString() }));
+    // return stops the function here, so the later checks and the 404 don't also run
     return;
   }
 
+  // This is last because it is the fallback: it only runs when no route above matched
   // 3. Any other path → 404
+  // writeHead sets the status code and headers; end sends the body and finishes the response
   res.writeHead(404, { "Content-Type": "text/html; charset=utf-8" });
   res.end(`<h1>404 Not Found</h1><p>No page at ${req.url}. <a href="/">Go home</a></p>`);
 });
