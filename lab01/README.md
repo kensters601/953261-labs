@@ -2,9 +2,9 @@
 
 | | |
 |---|---|
-| **Name** | Panapat Jaiprom |
-| **Nickname** | Khao Pun |
-| **Student ID** | 692115027 |
+| **Name** | Thanakorn Charnpatanakorn |
+| **Nickname** | Ken Ken |
+| **Student ID** | 692115019 |
 | **Section** | 701 |
 
 ## How to run
